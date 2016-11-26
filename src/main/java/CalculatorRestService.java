@@ -33,8 +33,9 @@ public class CalculatorRestService extends HttpServlet {
                 response.setContentType("application/json");
                 response.getWriter().append(result);
             } catch (Exception e) {
+                String error = "{error: " + e + "}";
                 response.setContentType("application/json");
-                response.getWriter().append(e.getMessage());
+                response.getWriter().append(error);
             }
         }
 
@@ -50,8 +51,9 @@ public class CalculatorRestService extends HttpServlet {
                 response.setContentType("application/json");
                 response.getWriter().append(result);
             } catch (Exception e) {
+                String error = "{error: " + e + "}";
                 response.setContentType("application/json");
-                response.getWriter().append(e.getMessage());
+                response.getWriter().append(error);
             }
         }
 
