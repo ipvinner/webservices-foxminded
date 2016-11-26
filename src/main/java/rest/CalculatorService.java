@@ -11,7 +11,7 @@ import javax.ws.rs.core.Response;
 public class CalculatorService {
 
     @GET
-    //@Produces(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
     public Response getSum(@QueryParam("number1") int number1,
                            @QueryParam("number2") int number2) {
 
@@ -23,7 +23,7 @@ public class CalculatorService {
     }
 
     @POST
-    //@Produces(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
     public Response getComp(@QueryParam("number1") int number1,
                            @QueryParam("number2") int number2) {
 
