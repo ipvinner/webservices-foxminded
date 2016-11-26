@@ -31,7 +31,7 @@ public class ClientCalculator {
             String output;
             System.out.println("Output from Server .... \n");
             while ((output = br.readLine()) != null) {
-                System.out.println(output);
+                System.out.println(parseJsonResult(output));
             }
 
             conn.disconnect();
@@ -43,5 +43,11 @@ public class ClientCalculator {
 
         }
 
+    }
+
+    private static String parseJsonResult(String jsonStr) {
+        String resultTemp = jsonStr.substring(8);
+        String result = resultTemp.substring(0, (resultTemp.length() - 1));
+        return result;
     }
 }
