@@ -9,7 +9,7 @@ import java.net.URL;
  * Created by ipvinner on 26.11.2016.
  */
 public class ClientCalculator {
-    // http://localhost:8080/RESTfulExample/json/product/get
+
     public static void main(String[] args) {
         try {
             Integer number1 = 2;
