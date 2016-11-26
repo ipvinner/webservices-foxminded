@@ -12,7 +12,10 @@ public class ClientCalculator {
     // http://localhost:8080/RESTfulExample/json/product/get
     public static void main(String[] args) {
         try {
-            URL url = new URL("http://localhost:8080/calculator/CalculatorRestService?number1=2&number2=2");
+            Integer number1 = 2;
+            Integer number2 = 4;
+
+            URL url = new URL("http://localhost:8080/calculator/CalculatorRestService?number1=" + number1 + "&number2=" + number2);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("POST");
             conn.setRequestProperty("Accept", "application/json");
